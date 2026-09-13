@@ -9,8 +9,6 @@ interface NavProps {
 const links: { label: string; page: Page }[] = [
   { label: 'Home', page: 'home' },
   { label: 'Stories', page: 'stories' },
-  { label: 'Creator Hub', page: 'creator-hub' },
-  { label: 'Resources', page: 'resources' },
   { label: 'Shop', page: 'shop' },
   { label: 'About', page: 'about' },
 ]

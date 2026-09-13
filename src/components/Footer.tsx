@@ -35,8 +35,8 @@ export default function Footer({ setPage }: FooterProps) {
               {[
                 { label: 'Home', page: 'home' as Page },
                 { label: 'Stories', page: 'stories' as Page },
-                { label: 'Creator Hub', page: 'creator-hub' as Page },
-                { label: 'Resources', page: 'resources' as Page },
+                { label: 'Shop', page: 'shop' as Page },
+                { label: 'About', page: 'about' as Page },
               ].map(({ label, page }) => (
                 <li key={page}>
                   <button
@@ -50,13 +50,11 @@ export default function Footer({ setPage }: FooterProps) {
             </ul>
           </div>
 
-          {/* Create */}
+          {/* Legal / misc */}
           <div>
-            <p className="text-xs font-semibold tracking-widest uppercase text-gold mb-5">Create</p>
+            <p className="text-xs font-semibold tracking-widest uppercase text-gold mb-5">More</p>
             <ul className="flex flex-col gap-3">
               {[
-                { label: 'Shop', page: 'shop' as Page },
-                { label: 'About', page: 'about' as Page },
                 { label: 'Admin', page: 'admin' as Page },
               ].map(({ label, page }) => (
                 <li key={page}>
@@ -68,7 +66,7 @@ export default function Footer({ setPage }: FooterProps) {
                   </button>
                 </li>
               ))}
-              {['Free Resources', 'Story Templates', 'Creator Guide'].map((l) => (
+              {['Privacy Policy', 'Terms of Use'].map((l) => (
                 <li key={l}>
                   <button className="text-cream/60 hover:text-cream text-sm transition-colors duration-200">
                     {l}

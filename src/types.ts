@@ -1,4 +1,4 @@
-export type Page = 'home' | 'stories' | 'creator-hub' | 'resources' | 'shop' | 'about' | 'admin'
+export type Page = 'home' | 'stories' | 'creator-hub' | 'resources' | 'shop' | 'about' | 'admin' | 'checkout'
 
 export interface Story {
   id: number
@@ -15,9 +15,19 @@ export interface Product {
   title: string
   description: string
   price: string
+  priceValue: number
   category: string
   image: string
   badge?: string
+}
+
+export interface CartItem {
+  productId: number
+  title: string
+  price: string
+  priceValue: number
+  image: string
+  category: string
 }
 
 export interface Resource {
@@ -35,4 +45,23 @@ export interface AdminUser {
   role: 'Owner' | 'Editor' | 'Viewer'
   joined: string
   status: 'Active' | 'Pending' | 'Revoked'
+}
+
+export interface PaystackConfig {
+  key: string
+  email: string
+  amount: number
+  currency: string
+  ref: string
+  metadata?: Record<string, unknown>
+  callback: (response: { reference: string }) => void
+  onClose: () => void
+}
+
+declare global {
+  interface Window {
+    PaystackPop: {
+      setup: (config: PaystackConfig) => { openIframe: () => void }
+    }
+  }
 }
