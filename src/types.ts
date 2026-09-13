@@ -1,4 +1,4 @@
-export type Page = 'home' | 'stories' | 'creator-hub' | 'resources' | 'shop' | 'about' | 'admin' | 'checkout'
+export type Page = 'home' | 'stories' | 'shop' | 'about' | 'admin' | 'checkout'
 
 export interface Story {
   id: number
