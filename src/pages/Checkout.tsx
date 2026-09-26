@@ -10,7 +10,7 @@ interface CheckoutProps {
 type CheckoutStep = 'details' | 'processing' | 'success' | 'failed'
 
 // Replace with your live Paystack public key
-const PAYSTACK_PUBLIC_KEY = 'pk_test_REPLACE_WITH_YOUR_PAYSTACK_PUBLIC_KEY'
+const PAYSTACK_PUBLIC_KEY = 'pk_test_c1f8a3c17db9030a81b5d489f8a50a77e2a804a5'
 
 // Exchange rate placeholder — update to real rate or use a live API
 const USD_TO_NGN = 1600
